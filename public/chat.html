@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Estilos generales -->
+    <link rel="stylesheet" href="css/video-background.css"> <!-- Estilos del video de fondo -->
+
+    <!-- Cargar jwt-decode antes de chat.js -->
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+    <!-- Cargar socket.io antes de chat.js -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Cargar chat.js después de las demás dependencias -->
+    <script src="js/chat.js" defer></script>
+</head>
+<body>
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+    
+    <!-- Capa de oscurecimiento para mejorar la legibilidad -->
+    <div class="overlay"></div>
+
+    <h2 id="welcomeMessage" class="welcome-title">
+        Bienvenido, <span id="usernameDisplay"></span>
+    </h2>
+
+    <div class="chat-container">
+        <!-- Sidebar con la lista de usuarios conectados -->
+        <div class="sidebar">
+            <h3>Usuarios Conectados</h3>
+            <div class="user-list">
+                <ul></ul>
+            </div>
+
+            <div class="user-listoption">
+                <h3>Mensajes privados/publicos</h3>
+                <select id="userList">
+                    <option value="public" selected>Mensaje Público</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Área principal del chat -->
+        <div class="main-chat-area">
+            <!-- Chat público -->
+            <div id="chatBoxContainer">
+                <div id="chatBox" class="chat-box"></div>
+                <form id="messageForm" class="message-form">
+                    <input id="message" autocomplete="off" placeholder="Escribe un mensaje..." />
+                    <button type="submit"></button> <!-- Se usa el icono del CSS -->
+                </form>
+            </div>
+
+            <!-- Contenedor de chats privados (dinámico) -->
+            <div id="privateChatsContainer"></div>
+        </div>
+    </div>
+
+</body>
+</html>
