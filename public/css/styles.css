@@ -17,7 +17,7 @@ body {
 
 /* ======================= CONTENEDOR PRINCIPAL (INDEX) ======================= */
 .container {
-    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    background: rgba(30, 98, 36, 0.9); /* Fondo blanco con transparencia */
     padding: 2rem;
     border-radius: 10px;
     width: 100%;
@@ -30,6 +30,7 @@ body {
 }
 
 h1, h2, h3 {
+    
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para mayor contraste */
     text-align: center; /* Asegura el centrado del texto */
@@ -613,7 +614,7 @@ a:hover {
 .title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #28a745;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
 }
@@ -643,10 +644,11 @@ a:hover {
     transition: all 0.3s ease;
 }
 
-/* Botón de inicio de sesión */
 .btn-login {
     background-color: #28a745;
-    color: white;
+    color: white; /* Asegura buen contraste */
+    font-size: 18px; /* Aumenta el tamaño del texto */
+    padding: 10px 20px; /* Mejora la apariencia */
 }
 
 .btn-login:hover {
@@ -656,9 +658,11 @@ a:hover {
 /* Botón de registro */
 .btn-register {
     background-color: #007bff;
-    color: 007bff;
+    color: white; /* Se corrigió el color para mejor contraste */
+    font-size: 18px; /* Aumenta el tamaño del texto */
+    padding: 10px 20px; /* Mejora la apariencia */
 }
 
 .btn-register:hover {
-    background-color: #007bff;
+    background-color: #0056b3;
 }
