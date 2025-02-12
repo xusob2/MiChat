@@ -171,7 +171,7 @@ a:hover {
 #loginForm p {
     margin-top: 10px;
     font-size: 1rem; /* Ajusta el tamaño del párrafo */
-    color: #f8f9fa; /* Blanco casi puro */
+    color:  rgba(0, 0, 0, 0.4); 
 }
 
 /* ======================= CHAT ORIGINAL ======================= */
